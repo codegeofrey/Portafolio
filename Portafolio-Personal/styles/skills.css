@@ -1,0 +1,209 @@
+/* Eliminar márgenes y rellenos predeterminados en todos los elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración del body para que ocupe todo el ancho */
+body {
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(24deg, #FF204E, #A0153E, #8a326b , #00224D ) no-repeat;  /* Fondo gradiente */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100vw;  /* Asegura que el body ocupe todo el ancho de la pantalla */
+    background-size: 400% 400%;
+    padding: 0;  /* Elimina cualquier padding en el body */
+    transition: opacity 1s ease-out;   
+    animation: gradient 13s ease infinite;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    width: 1150px;
+    gap: 150px;
+}
+
+
+/* Centrado del título Estudios */
+h1.Estudios {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+.lista-estudios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Para que se acomode si hay poco espacio */
+}
+
+.lista-estudios li {
+    flex: 1;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+    border-radius: 12px;
+    padding: 20px;
+    list-style: none;
+    color: #dcdcdc;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-estudios li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px aquamarine;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 100%;  /* Empieza desde abajo */
+    }
+    50% {
+        background-position: 100% 0%;  /* En el centro */
+    }
+    100% {
+        background-position: 0% 100%;  /* Vuelve a abajo */
+    }
+}
+
+.page {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.page.fade-out {
+    opacity: 0;
+}
+
+.page.fade-in {
+    opacity: 1;
+}
+
+
+
+/* El contenedor principal usa todo el ancho disponible */
+.container {
+    display: flex;
+    justify-content: space-between;  /* Distribuye el contenido */
+    gap: 20px;  /* Agrega espacio entre los contenedores */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    padding: 0;  /* Elimina padding para que no haya espacio extra */
+}
+
+/* El main debe ocupar todo el ancho y alto disponible */
+main {
+    width: 100%;  /* Asegura que ocupe todo el ancho */
+    padding: 0;  /* Elimina padding innecesario */
+}
+
+/* Asegura que los contenedores izquierdo y derecho ocupen el 48% del ancho */
+.contenido-left, .contenido-right {
+    width: 48%;  /* Utiliza el 48% del ancho disponible */
+    padding: 20px;  /* Agrega padding interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* La sección del CV ocupa todo el ancho y alto de la ventana */
+section.Curriculum {
+    width: 100%;  /* Ocupa todo el ancho */
+   /* Ocupa toda la altura de la ventana */
+    padding: 40px; /* Relleno dentro de la sección */
+    text-align: center;
+    color: #FFFFFF;
+    gap: 20px;
+    margin-top: 20px;  /* Espacio superior */
+    margin-left: 0; /* Elimina márgenes en los laterales */
+    margin-right: 0; /* Elimina márgenes en los laterales */
+    border: none;
+}
+
+/* Para las listas dentro de los contenedores */
+ul {
+    color: #dcdcdc;
+    font-size: 18px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* Títulos */
+h1 {
+    font-family: Monteserrat, sans-serif;
+    color: #e0e0e0;
+    font-size: 4rem;
+    padding-bottom: 15%;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+    transition: text-shadow 0.5s ease-in-out, transform 0.3s ease;
+}
+
+strong, h3{
+    color: aquamarine;
+    text-shadow: 0 0 10px aquamarine,  0 0 0px aquamarine,  0 0 0px aquamarine,  0 0 20px aquamarine ;
+}
+
+h1:hover {
+    text-shadow: 0 0 0px #FFFFFF, 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF;
+    transform: scale(1.05); /* Efecto de aumentar ligeramente el tamaño al hacer hover */
+}
+
+.contenido-right {
+    text-align: center;
+}
+
+button{
+    color: #FFFFFF;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+
+button:hover{
+    text-shadow: 0 0 0px #FFFFFF, 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF;
+}
+
+
+a.btn{
+    color: #FFFFFF;
+    background: rgb(5, 207, 140);
+    border: #4c5c61 2px solid;
+    box-shadow: 0 0 10px aquamarine,  0 0 0px aquamarine,  0 0 0px aquamarine,  0 0 20px aquamarine ;
+}
+
+/* Responsividad en pantallas pequeñas */
+@media (max-width: 568px) {
+    .container {
+        flex-direction: column;  /* Cambia a columna cuando la pantalla sea pequeña */
+        gap: 10px;  /* Menos espacio entre los contenedores */
+        height: 100%;
+    }
+
+    .contenido-left, .contenido-right {
+        width: 100%;  /* Los contenedores ocuparán todo el ancho */
+        margin-bottom: 20px;  /* Margen entre ellos */
+    }
+
+    h1 {
+        font-size: 2.5rem;  /* Reduce el tamaño de los títulos */
+    }
+
+    section.Curriculum {
+        padding: 20px;  /* Ajuste de padding en pantallas más pequeñas */
+    }
+}
