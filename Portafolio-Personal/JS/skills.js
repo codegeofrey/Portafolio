@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // para redirigir a Perfil.html
             setTimeout(function() {
-                window.location.href = 'Perfil.html';  // Redirigir a Perfil.html
+                window.location.href = 'index.html';  // Redirigir a Perfil.html
             }, 1000);  // Tiempo de espera para la animación
         });
     }
