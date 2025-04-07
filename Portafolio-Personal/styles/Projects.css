@@ -220,3 +220,96 @@ i{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+
+
+
+/* Pantallas pequeñas: celulares comunes */
+@media screen and (max-width: 576px) {
+    .card {
+      flex-direction: column !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    .card img {
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+  
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+  
+    .icons {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .iconos {
+      margin-left: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .iconos i {
+      width: auto;
+      min-width: 45px;
+    }
+  
+    .Titulo {
+      font-size: 32px;
+    }
+  
+    .d-flex {
+      flex-direction: column !important;
+      align-items: center;
+    }
+  
+    ul.d-flex {
+      padding-left: 0;
+    }
+  
+    #go-back {
+      right: 5px;
+      top: 5px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Pantallas medianas: celulares más anchos o pequeñas tablets */
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+  
+    .card img {
+      height: auto;
+    }
+  
+    .Titulo {
+      font-size: 42px;
+    }
+  
+    .iconos {
+      justify-content: center;
+    }
+  }
+  
+  /* Pantallas de transición (como tablets horizontales o pantallas más pequeñas de laptop) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card {
+      width: 90%;
+      height: auto;
+      flex-direction: row;
+    }
+  
+    .icons {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  
