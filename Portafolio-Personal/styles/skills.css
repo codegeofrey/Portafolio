@@ -190,20 +190,53 @@ a.btn{
 @media (max-width: 568px) {
     .container {
         flex-direction: column;  /* Cambia a columna cuando la pantalla sea pequeña */
-        gap: 10px;  /* Menos espacio entre los contenedores */
+        gap: 10px;
         height: 100%;
     }
 
+    body {
+        background-size: 600% 600%;
+        overflow-x: hidden;  /* Asegura que no haya scroll lateral */
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
     .contenido-left, .contenido-right {
-        width: 100%;  /* Los contenedores ocuparán todo el ancho */
-        margin-bottom: 20px;  /* Margen entre ellos */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     h1 {
-        font-size: 2.5rem;  /* Reduce el tamaño de los títulos */
+        font-size: 2.5rem;
     }
 
     section.Curriculum {
-        padding: 20px;  /* Ajuste de padding en pantallas más pequeñas */
+        padding: 20px;
+    }
+
+    /* ✅ Aquí empieza la mejora importante */
+    .lista-estudios {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .lista-estudios li {
+        width: 95%;
+        max-width: 350px;
+        font-size: 14.5px;
+        padding: 12px 15px;
+        text-align: left;
+        line-height: 1.4;
+        background-color: rgba(255, 255, 255, 0.04);
+    }
+
+    h1.Estudios {
+        font-size: 2.1rem;
+        margin-bottom: 15px;
     }
 }
