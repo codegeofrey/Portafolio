@@ -199,3 +199,7 @@ h3{
         margin-top: 100px;
     }
 }
+
+body{
+    background-size: 800% 800%;
+}
